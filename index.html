@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search Tree Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Binary Search Tree Visualizer</h1>
+            <p class="description">Interactively visualize Binary Search Tree operations with animations</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="controls">
+                <div class="control-group">
+                    <h2>Node Operations</h2>
+                    <div class="input-group">
+                        <input type="number" id="node-value" placeholder="Enter a number">
+                        <button id="insert-btn">Insert</button>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="delete-value" placeholder="Enter a number">
+                        <button id="delete-btn">Delete</button>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="search-value" placeholder="Enter a number">
+                        <button id="search-btn">Search</button>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <h2>Traversals</h2>
+                    <div class="btn-group">
+                        <button class="traversal-btn" id="inorder-btn">Inorder</button>
+                        <button class="traversal-btn" id="preorder-btn">Preorder</button>
+                        <button class="traversal-btn" id="postorder-btn">Postorder</button>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <h2>Tree Operations</h2>
+                    <button class="reset-btn" id="reset-btn">Reset Tree</button>
+                </div>
+                
+                <div class="node-info">
+                    <div class="node">
+                        <div class="node-color normal-node"></div>
+                        <span>Normal Node</span>
+                    </div>
+                    <div class="node">
+                        <div class="node-color visited-node"></div>
+                        <span>Visited Node</span>
+                    </div>
+                    <div class="node">
+                        <div class="node-color found-node"></div>
+                        <span>Found Node</span>
+                    </div>
+                    <div class="node">
+                        <div class="node-color traversal-path"></div>
+                        <span>Traversal Path</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="visualization">
+                <canvas id="tree-canvas"></canvas>
+                <div class="message" id="message"></div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h2>How to Use</h2>
+            <ul>
+                <li>Enter a number and click "Insert" to add it to the BST</li>
+                <li>Enter a number and click "Delete" to remove it from the BST</li>
+                <li>Enter a number and click "Search" to find it in the BST</li>
+                <li>Click on any traversal button to see the traversal order</li>
+                <li>Use "Reset Tree" to start over with an empty tree</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
